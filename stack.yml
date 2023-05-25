@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  web:
+    image: myflaskapp
+    ports:
+      - "5000:5000"
+    deploy:
+      replicas: 3

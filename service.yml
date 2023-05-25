@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: myflaskapp
+spec:
+  selector:
+    app: myflaskapp
+  ports:
+  - port: 5000
+    targetPort: 3000
+  
