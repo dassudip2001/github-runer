@@ -23,7 +23,7 @@ jobs:
       run:  docker tag  flaskapp  dassudip2001/flaskapp 
 
   remove_oldimage:
-    needs: rename
+    needs: build
     runs-on: ubuntu-latest
     steps:     
     - name: remove the old image from the instance
