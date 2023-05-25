@@ -17,5 +17,20 @@ jobs:
     - name: Build the Docker image
       run: docker build -t flaskapp .
 
+  rename:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
     - name: rename the docker image
-      run:  docker tag  flaskapp  dassudip2001/flaskapp
+      run:  docker tag  flaskapp  dassudip2001/flaskapp 
+
+  remove_oldimage:
+    needs: rename
+    runs-on: ubuntu-latest
+    steps:     
+    - name: remove the old image from the instance
+      run: docker system prune
+
+
+    
+
