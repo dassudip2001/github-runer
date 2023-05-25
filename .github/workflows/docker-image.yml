@@ -25,7 +25,7 @@ jobs:
       run: docker images
 
     - name: docker hub login
-      run: docker login 
+      run: docker login -u ${{DOCKERUSERNAME}} -p ${{DOCKERPASSWORD}}
     - name: docker image push
       run: docker push dassudip2001/flaskapp 
       
