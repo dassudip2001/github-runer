@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build -t flaskapp
+      run: docker build -t flaskapp .
 
     - name: rename the docker image
       run:  docker tag  flaskapp  dassudip2001/flaskapp
