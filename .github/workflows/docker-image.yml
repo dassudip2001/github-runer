@@ -24,6 +24,8 @@ jobs:
 
     - name: docker hub login
       run: docker login 
+    - name: docker image push
+      run: docker push dassudip2001/flaskapp 
       
 
   remove_oldimage:
